@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projeto Final Front — FlameBurger</title>
+  <meta name="description" content="FlameBurger — site de hamburgueria com foco em acessibilidade e performance." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="brand" href="#" aria-label="FlameBurger — página inicial">FlameBurger</a>
+      <nav class="top-nav" role="navigation" aria-label="Navegação principal">
+        <button id="menuToggle" aria-expanded="false" aria-controls="primaryMenu">Menu</button>
+        <ul id="primaryMenu" class="menu" hidden>
+          <li><a href="#menu" tabindex="0">Cardápio</a></li>
+          <li><a href="#sobre" tabindex="0">Sobre</a></li>
+          <li><a href="#contato" tabindex="0">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="controls">
+        <button id="toggleTheme" aria-pressed="false" aria-label="Alternar modo escuro">Modo</button>
+        <button id="toggleContrast" aria-pressed="false" aria-label="Ativar alto contraste">Alto Contraste</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">FlameBurger — Sabor que acende seu dia</h1>
+        <p class="lead">Hambúrgueres artesanais, ingredientes selecionados e atendimento acessível.</p>
+        <a class="cta" href="#menu">Pedir Agora</a>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-section" aria-labelledby="menu-title">
+      <div class="container">
+        <h2 id="menu-title">Nosso Cardápio</h2>
+        <ul class="cards" role="list">
+          <li class="card" role="listitem">
+            <img src="assets/burger1.svg" alt="Hambúrguer clássico com queijo" width="320" height="200" loading="lazy" />
+            <h3>Clássico Cheese</h3>
+            <p>Carne 150g, queijo derretido, alface crocante e molho especial.</p>
+            <button class="order" aria-label="Pedir Clássico Cheese">Pedir</button>
+          </li>
+          <li class="card" role="listitem">
+            <img src="assets/burger2.svg" alt="Hambúrguer com bacon e cebola caramelizada" width="320" height="200" loading="lazy" />
+            <h3>Bacon Supreme</h3>
+            <p>Bacon crocante, cebola caramelizada, queijo cheddar e picles.</p>
+            <button class="order" aria-label="Pedir Bacon Supreme">Pedir</button>
+          </li>
+          <li class="card" role="listitem">
+            <img src="assets/burger3.svg" alt="Hambúrguer vegetariano com legumes grelhados" width="320" height="200" loading="lazy" />
+            <h3>Veggie Grill</h3>
+            <p>Hambúrguer de grão-de-bico, legumes grelhados e maionese vegana.</p>
+            <button class="order" aria-label="Pedir Veggie Grill">Pedir</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sobre" class="about" aria-labelledby="sobre-title">
+      <div class="container">
+        <h2 id="sobre-title">Sobre a FlameBurger</h2>
+        <p>Somos uma hamburgueria boutique que prioriza sabor, sustentabilidade e acessibilidade. Nossa equipa foi treinada para atendimento inclusivo.</p>
+      </div>
+    </section>
+
+    <section id="contato" class="contact" aria-labelledby="contato-title">
+      <div class="container">
+        <h2 id="contato-title">Contato</h2>
+        <form id="contactForm" aria-label="Formulário de contato">
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; FlameBurger — Projeto Final Front</p>
+      <nav aria-label="Links secundários">
+        <a href="#" rel="noopener">Privacidade</a> · <a href="#" rel="noopener">Termos</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
